@@ -1,5 +1,3 @@
-# PyPentest
-
 # 🛠️ Installation
 
 With Github
