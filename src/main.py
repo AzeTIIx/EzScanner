@@ -25,7 +25,8 @@ def scan(begin, end, target):
     for i in range (int(begin), int(end)+1):
         res = scanner.scan(target,str(i))
         res = res['scan'][target]['tcp'][i]['state']
-        print(f'port {i} is {res}.')
+        if res == "open":
+            print(f'port {i} is {res}.')
     
 
 if __name__ =='__main__':
