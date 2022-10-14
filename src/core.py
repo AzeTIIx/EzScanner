@@ -1,6 +1,7 @@
+from platform import platform
 from pystyle import *
 from tqdm import trange
-import nmap, sys
+import nmap, sys, os, platform
 
 
 def title():
@@ -33,17 +34,29 @@ def scan(begin, end, target):
         
     for i in range(len(o)):
         print("Port {} is open" . format(o[i]))
-    
-    
-    
-
-if __name__ =='__main__':
+        
+def isup(host):
+    os_system = platform.system()
+    if(os_system=="Linux"):
+        cmd = str("ping -c 4 " + host)
+        os.system(cmd)
+    else:
+        cmd = str("ping " + host)
+        os.system(cmd)
+        
+def main():
     n = len(sys.argv)
     
     if(sys.argv[1] == "--help"):
         print("Usage : \n")
+        print("nmap port scan : \n")
         print("     main.py [first port] [last port] [target ip]\n")
-        
+        print("check if host is up : \n")
+        print("     main.py --isup [target ip]\n")
+    elif (sys.argv[1] == "--isup"):
+        host = sys.argv[2]
+        isup(host)    
+    
     elif (n < 3):
         print("Error, synthax is main.py [first port] [last port] [target]")
         
