@@ -1,5 +1,17 @@
 # 🛠️ Installation
 
+With pip
+
+```
+pip install PyPentest
+```
+or
+
+```
+python3 -m install PyPentest
+```
+
+
 With Github
 
 ```
