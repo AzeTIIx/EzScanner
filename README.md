@@ -13,5 +13,5 @@ PyPentest can be run from the CLI.
 
 # 📚 CLI Example
 ```
-main.py 15 40 192.168.0.1
+PyPentest 15 40 192.168.0.1
 ```
