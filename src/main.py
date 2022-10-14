@@ -1,5 +1,7 @@
 from pystyle import *
+from tqdm import trange
 import nmap, sys
+
 
 def title():
     banner = """
@@ -22,9 +24,11 @@ def params():
 def scan(begin, end, target):
     scanner = nmap.PortScanner()
 
-    for i in range (int(begin), int(end)+1):
+    for i in trange(int(begin), int(end)+1):
         res = scanner.scan(target,str(i))
         res = res['scan'][target]['tcp'][i]['state']
+        
+    for i in range(int(begin), int(end)+1):
         if res == "open":
             print(f'port {i} is {res}.')
     
@@ -42,5 +46,5 @@ if __name__ =='__main__':
     else:
         title()
         begin, end, target = params()
-        scan(begin, end, target)
+        res = scan(begin, end, target)
 
