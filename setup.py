@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='PyPentest',
-    version="0.4",
+    version="0.5",
     packages=find_packages(),
     author="CharlesAIMIN",
     author_email="caimin.ing2024@esaip.org",
