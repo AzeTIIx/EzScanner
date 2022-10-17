@@ -28,7 +28,7 @@ PyPentest can be run from the CLI.
 You can perform nmap scan
 
 ```
-PyPentest 15 40 192.168.0.1
+PyPentest --nmap 15 40 192.168.0.1
 ```
 
 Or check if an host is up
