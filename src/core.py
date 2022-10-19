@@ -1,7 +1,7 @@
 from platform import platform
 from pystyle import *
 from tqdm import trange
-import socket, sys, os, platform
+import socket, sys, os, platform, argparse
 
 
 def title():
@@ -16,11 +16,6 @@ def title():
     print(Center.XCenter(Colorate.Vertical(Colors.blue_to_purple, banner, 2)))
 
 
-def params():
-    begin = sys.argv[2]
-    end = sys.argv[3]
-    ip = sys.argv[4]
-    return begin, end, ip
 
 def scan(begin, end, ip):
     o = []
@@ -53,26 +48,30 @@ def isup(host):
         os.system(cmd)
 
 def main():
-    n = len(sys.argv)
+    parser = argparse.ArgumentParser()
+    subparser = parser.add_subparsers(dest='command')
+    
+    nmap = subparser.add_parser('nmap')
+    hostup = subparser.add_parser('isup')
 
-    if(sys.argv[1] == "--help"):
-        title()
-        print("Usage : \n")
-        print("nmap port scan : \n")
-        print("     PyPentest --nmap [first port] [last port] [target ip]\n")
-        print("check if host is up : \n")
-        print("     PyPentest --isup [target ip]\n")
-    elif (sys.argv[1] == "--isup"):
-        title()
-        host = sys.argv[2]
-        isup(host)
+    nmap.add_argument('-b', type=int)
+    nmap.add_argument('-e', type=int)
+    nmap.add_argument('-target')
+    
+    hostup.add_argument('-ip')
 
-    elif (n < 3):
-        error = "Error, synthax is main.py [first port] [last port] [target]"
-        print(Colorate.Color(Colors.red, error, True))
+    args = parser.parse_args()
 
-    elif(sys.argv[1] == '--nmap'):
+    if args.command == 'nmap':
         title()
-        begin, end, ip = params()
+        begin = args.b
+        end =args.e
+        ip = args.target
         scan(begin, end, ip)
-
+        
+    elif args.command == 'isup':
+        title()
+        ip = args.ip
+        isup(ip)
+    
+        
