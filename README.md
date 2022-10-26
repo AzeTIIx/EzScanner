@@ -3,12 +3,12 @@
 With pip
 
 ```
-pip install PyPentest
+pip install EzScanner
 ```
 or
 
 ```
-python3 -m install PyPentest
+python3 -m install EzScanner
 ```
 
 
