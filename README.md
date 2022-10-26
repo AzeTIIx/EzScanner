@@ -15,9 +15,9 @@ python3 -m install EzScanner
 With Github
 
 ```
-git clone https://github.com/CharlesAIMIN/PyPentest.git
-cd PyPentest/
-python3 setup.py install
+git clone https://github.com/CharlesAIMIN/EzScanner.git
+cd EzScanner/
+sudo python3 setup.py install
 ```
 
 # Quick Start
@@ -28,11 +28,11 @@ PyPentest can be run from the CLI.
 You can perform nmap scan
 
 ```
-PyPentest --nmap 15 40 192.168.0.1
+EzScanner nmap -b 20 -e 80 -ip 127.0.0.1
 ```
 
-Or check if an host is up
+Or scan a range of IP 
 
 ```
-PyPentest --isup 192.168.0.1
+PyPentest isup -b 20 -e 80 -ip 127.0.0.1
 ```
