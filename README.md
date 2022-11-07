@@ -1,3 +1,9 @@
+# Summary
+
+EzScanner allows you to perform a fast NMAP scan in TCP, as well as banner grab and scan a range of IP addresses to check if they are online.
+
+Please do not use this tool on networks whose owner has not given you permission.
+
 # 🛠️ Installation
 
 With pip
