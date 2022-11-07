@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://github.com/CharlesAIMIN/CharlesAIMIN/blob/EzScanner/EzScanner.png">
+</div>
+
 # Summary
 
 EzScanner allows you to perform a fast NMAP scan in TCP, as well as banner grab and scan a range of IP addresses to check if they are online.
