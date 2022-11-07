@@ -1,5 +1,7 @@
+# EzScanner the quick and easy nmap scanner
+
 <div align="center">
-  <img src="https://github.com/CharlesAIMIN/CharlesAIMIN/blob/EzScanner/EzScanner.png">
+  <img src="https://github.com/CharlesAIMIN/EzScanner/blob/main/EzScanner.png">
 </div>
 
 # Summary
