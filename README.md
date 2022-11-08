@@ -46,5 +46,5 @@ EzScanner nmap -b 20 -e 80 -ip 127.0.0.1
 Or scan a range of IP 
 
 ```
-PyPentest isup -b 20 -e 80 -ip 127.0.0.1
+EzScanner isup -b 20 -e 80 -ip 127.0.0.1
 ```
