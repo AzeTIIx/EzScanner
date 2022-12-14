@@ -33,7 +33,7 @@ sudo python3 setup.py install
 ```
 
 # Quick Start
-PyPentest can be run from the CLI.
+EzScanner can be run from the CLI.
 
 # 📚 CLI Example
 
