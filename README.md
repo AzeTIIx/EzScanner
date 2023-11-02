@@ -1,3 +1,5 @@
+[![Downloads](https://static.pepy.tech/badge/ezscanner)](https://pepy.tech/project/ezscanner)
+
 # EzScanner the quick and easy nmap scanner
 
 <div align="center">
