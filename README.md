@@ -27,7 +27,7 @@ python3 -m install EzScanner
 With Github
 
 ```
-git clone https://github.com/CharlesAIMIN/EzScanner.git
+git clone https://github.com/AzeTIIx/EzScanner.git
 cd EzScanner/
 sudo python3 setup.py install
 ```
